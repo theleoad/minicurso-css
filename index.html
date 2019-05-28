@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Eu sou o Leo AD</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
   <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
     integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
@@ -13,33 +14,105 @@
 </head>
 
 <body>
-  <div class="container">
-    <header>
-      <div class="picture">
-        <img src="http://www.ie.ufrj.br/intranet/ie/intranet/images/fotos/default.png">
-      </div>
-      <div class="main-info">
-        <h1>Leo AD</h1>
-        <h3>Leo legal!</h3>
-      </div>
-    </header>
-    <nav>
-      <i class="fab fa-github-alt fa-fw"></i></i> <i class="fab fa-twitter fa-fw"></i> <i
-        class="fab fa-instagram fa-fw"></i>
-    </nav>
-    <main>
+  <header>
+    <div class="cover-image">
+      <img src="http://www.ie.ufrj.br/intranet/ie/intranet/images/fotos/default.png">
+    </div>
+    <div class="main-info">
+      <h1>Leo AD</h1>
+      <h3>Leo legal!</h3>
+    </div>
+  </header>
+  <nav>
+    <i class="fab fa-github-alt fa-fw"></i></i> <i class="fab fa-twitter fa-fw"></i> <i
+      class="fab fa-instagram fa-fw"></i>
+  </nav>
+  <main>
+    <div class="regular-row introducing">
       <p>Mussum Ipsum, cacilds vidis litro abertis. Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo
         pose. Leite de capivaris, leite de mula manquis sem cabeça. Mauris nec dolor in eros commodo tempor. Aenean
         aliquam molestie leo, vitae iaculis nisl. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean
         sit amet nisi.</p>
       <p>Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo pose. Praesent malesuada urna nisi, quis
         volutpat erat hendrerit non. Nam vulputate dapibus. Mais vale um bebadis conhecidiss, que um alcoolatra
-        anonimis.
-        Manduma pindureta quium dia nois paga</p>
-    </main>
-    <hr>
-    <div class="form">
-      <h3>Fale comigo</h3>
+        anonimis. Manduma pindureta quium dia nois paga.</p>
+      <blockquote cite="https://www.osvigaristas.com.br/frases/tecnologia/">
+        <p>Só ficarei impressionado com a tecnologia quando eu puder baixar comida na internet.</p>
+        <cite>– Júnior Rodríguez, Os Vigaristas</cite>
+      </blockquote>
+      <p>Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo pose. Praesent malesuada urna nisi, quis
+        volutpat erat hendrerit non. Nam vulputate dapibus. Mais vale um bebadis conhecidiss, que um alcoolatra
+        anonimis. Manduma pindureta quium dia nois paga. Leite de capivaris, leite de mula manquis sem cabeça. Mauris
+        nec dolor in eros commodo tempor. Aenean
+        aliquam molestie leo, vitae iaculis nisl. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean
+        sit amet nisi.</p>
+    </div>
+    <div class="division-row">
+    </div>
+    <div class="regular-row">
+      <h2>Minhas Habilidades</h2>
+      <div class="accordion">
+        <div class="option">
+          <input type="checkbox" id="toggle1" class="toggle" />
+              <label class="title" for="toggle1">HTML</label>
+          <div class="content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+              ea commodo consequat. </p>
+          </div>
+        </div>
+
+        <div class="option">
+          <input type="checkbox" id="toggle2" class="toggle" />
+          <label class="title" for="toggle2">CSS</label>
+          <div class="content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+              ea commodo consequat. </p>
+          </div>
+        </div>
+
+        <div class="option">
+          <input type="checkbox" id="toggle3" class="toggle" />
+          <label class="title" for="toggle3">JavaScript</label>
+          <div class="content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+              ea commodo consequat. </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="division-row-color">
+      <div class="typewriter">
+        <h2>Exemplo de @keyframes </h2>
+      </div>
+    </div>
+    <div class="regular-row">
+        <h2>Galeria de Fotos</h2>
+      <div class="photos">
+        <div class="photo-wrapper" filter="Sepia 80%"><img src="https://loremflickr.com/360/360?random=1"></div>
+        <div class="photo-wrapper" filter="Brightness 50%"><img src="https://loremflickr.com/360/360?random=2"></div>
+        <div class="photo-wrapper" filter="Contrast 50%"><img src="https://loremflickr.com/360/360?random=3"></div>
+        <div class="photo-wrapper" filter="Blur 5px"><img src="https://loremflickr.com/360/360?random=4"></div>
+        <div class="photo-wrapper" filter="Grayscale 50%"><img src="https://loremflickr.com/360/360?random=5"></div>
+        <div class="photo-wrapper" filter="Hue-rotate 45deg"><img src="https://loremflickr.com/360/360?random=6"></div>
+        <div class="photo-wrapper" filter="Invert 75%"><img src="https://loremflickr.com/360/360?random=7"></div>
+        <div class="photo-wrapper" filter="Opacity 50%"><img src="https://loremflickr.com/360/360?random=8"></div>
+        <div class="photo-wrapper" filter="Saturate 50%"><img src="https://loremflickr.com/360/360?random=9"></div>
+        <div class="photo-wrapper" filter="Invert 80%, Sepia 80%"><img src="https://loremflickr.com/360/360?random=10">
+        </div>
+        <div class="photo-wrapper" filter="Contrast 2, Brightness 120%"><img
+            src="https://loremflickr.com/360/360?random=11"></div>
+        <div class="photo-wrapper" filter="Hue-rotate 45deg, Contrast 3"><img
+            src="https://loremflickr.com/360/360?random=12"></div>
+      </div>
+    </div>
+    <div class="division-row">
+    </div>
+    <div class="regular-row form">
+      <h2>Fale comigo</h2>
       <form>
 
         <input type="text" id="nome" placeholder="Seu nome..">
@@ -56,8 +129,11 @@
         <button><span>Enviar</span></button>
 
       </form>
+
     </div>
-  </div>
+  </main>
+  <hr>
+
 </body>
 
 </html>
