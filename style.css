@@ -339,6 +339,54 @@ cite {
 
 /*END - Dumb code*/
 
+
+/*Tooltip*/
+
+a[tooltip-text] {
+	position: relative;
+	text-decoration: none;
+  color: black;
+  background: yellow;
+}
+a[tooltip-text]:after {
+	content: attr(tooltip-text);
+	position: absolute;
+	bottom: 130%;
+	left: 20%;
+	background: #ffcb66;
+	padding: 5px 15px;
+	color: black;
+	border-radius: 10px;
+	white-space: nowrap;
+	opacity: 0;
+	transition: all 0.5s ease;
+}
+a[tooltip-text]:before {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-top: 20px solid #ffcb66;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	transition: all 0.5s ease;
+	opacity: 0;
+	left: 30%;
+	bottom: 90%;
+}
+a[tooltip-text]:hover:after {
+	bottom: 100%;
+}
+a[tooltip-text]:hover:before {
+	bottom: 70%;
+}
+a[tooltip-text]:hover:after,
+a[tooltip-text]:focus:after,
+a[tooltip-text]:hover:before,
+a[tooltip-text]:focus:before{
+	opacity: 1;
+}
+
 /* Seção 4 */
 
 .form form {
