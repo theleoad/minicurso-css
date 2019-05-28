@@ -1,7 +1,16 @@
+/*Definindo as cores, fonte e estilos para elementos que serão usados ao longo de toda a página*/
 :root {
   --cor-clara: rgba(75, 108, 183, 0.9);
   --cor-escura: rgba(24, 40, 72, 0.9);
   font-family: "Ubuntu", sans-serif;
+}
+
+h1,
+h2,
+h3,
+p {
+  color: var(--cor-escura);
+  text-align: center;
 }
 
 .container {
@@ -10,6 +19,31 @@
   width: 100%;
 }
 
+.regular-row {
+  margin: 0 auto;
+  max-width: 1080px;
+  padding: 15px 0;
+  width: 90%;
+}
+
+
+.division-row {
+  background: linear-gradient(to right, var(--cor-escura), var(--cor-clara)),
+    url(https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80) center/cover;
+  margin: 20px 0;
+  min-height: 150px;
+}
+
+.division-row-color {
+  align-items: center;
+  background: var(--cor-escura);
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  min-height: 150px;
+}
+
+/* Seção 1 */
 .cover-image {
   background: linear-gradient(to right, var(--cor-escura), var(--cor-clara)), url(https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80) 25% center/cover;
   height: 300px;
@@ -35,14 +69,6 @@ header img:hover {
   margin: 110px auto 0;
   max-width: 1080px;
   width: 90%;
-}
-
-h1,
-h2,
-h3,
-p {
-  color: var(--cor-escura);
-  text-align: center;
 }
 
 nav {
@@ -73,18 +99,11 @@ main p {
   text-align: justify;
 }
 
-.regular-row {
-  margin: 0 auto;
-  max-width: 1080px;
-  padding: 15px 0;
-  width: 90%;
-}
-
 .introducing * {
   color: var(--cor-clara);
 }
 
-.introducing > p {
+.introducing>p {
   background: rgba(255, 255, 0, 0.05);
 }
 
@@ -118,21 +137,7 @@ cite {
   text-align: right;
 }
 
-.division-row {
-  background: linear-gradient(to right, var(--cor-escura), var(--cor-clara)),
-    url(https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80) center/cover;
-  margin: 20px 0;
-  min-height: 150px;
-}
-
-.division-row-color {
-  align-items: center;
-  background: var(--cor-escura);
-  display: flex;
-  justify-content: center;
-  margin: 20px 0;
-  min-height: 150px;
-}
+/* Seção 2 */
 
 .accordion {
   margin: 3em auto;
@@ -187,6 +192,7 @@ cite {
   max-height: 0;
   overflow: hidden;
 }
+
 .accordion .content p {
   font-size: 0.9em;
   line-height: 1.5;
@@ -194,40 +200,58 @@ cite {
   padding: 0.5em 1em 1em;
 }
 
-.accordion .toggle:checked + .title,
-.accordion .toggle:checked ~ .content {
+.accordion .toggle:checked+.title,
+.accordion .toggle:checked~.content {
   box-shadow: 3px 3px 6px #ddd, -3px 3px 6px #ddd;
 }
-.accordion .toggle:checked ~ .content {
+
+.accordion .toggle:checked~.content {
   max-height: 500px;
 }
-.accordion .toggle:checked + .title:before {
+
+.accordion .toggle:checked+.title:before {
   transform: rotate(90deg) !important;
   -webkit-transform: rotate(90deg) !important;
 }
 
+/* Divisor com @keyframe */
+
 .typewriter h2 {
-  animation: 
+  animation:
     typing 4s steps(32, end) infinite,
     blink-caret .4s step-end infinite;
-  border-right: .15em solid orange; 
+  border-right: .15em solid orange;
   color: #fff;
   font-family: monospace;
-  letter-spacing: .25em; 
-  margin: 0 auto; 
-  overflow: hidden; 
-  white-space: nowrap; 
+  letter-spacing: .25em;
+  margin: 0 auto;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 @keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+  from {
+    width: 0
+  }
+
+  to {
+    width: 100%
+  }
 }
 
 @keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: orange }
+
+  from,
+  to {
+    border-color: transparent
+  }
+
+  50% {
+    border-color: orange
+  }
 }
+
+/* Seção 3 */
 
 .photos {
   display: flex;
@@ -245,7 +269,7 @@ cite {
   max-width: 100%;
 }
 
-.photos .photo-wrapper{
+.photos .photo-wrapper {
   flex: 0 0 auto;
   background-color: #fff;
 }
@@ -302,7 +326,7 @@ cite {
 /*Dumb code*/
 
 .photos .photo-wrapper:first-child::after {
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgba(0, 0, 0, 0.4);
   color: white;
   content: 'Sepia 80%';
   left: 50%;
@@ -315,10 +339,7 @@ cite {
 
 /*END - Dumb code*/
 
-hr {
-  border-color: var(--cor-clara);
-  border-width: 1px;
-}
+/* Seção 4 */
 
 .form form {
   padding: 15px 10%;
@@ -329,56 +350,59 @@ textarea {
   width: 100%;
 }
 
-.form label, .form input, .form textarea {
+.form label,
+.form input,
+.form textarea {
   transition: all .5s;
 }
 
 .form label {
+  color: rgba(24, 40, 72, 0.5);
   display: block;
   margin-bottom: 10px;
   transform: translateY(-25px);
-  color: rgba(24, 40, 72, 0.5);
 }
 
-.form textarea + label {
+.form textarea+label {
   transform: translateY(-50px);
 }
 
-.form input, .form textarea {
-  border: 0;
-  border-bottom: 2px solid rgba(24, 40, 72, 0.5);
+.form input,
+.form textarea {
   -webkit-appearance: none;
+  border-bottom: 2px solid rgba(24, 40, 72, 0.5);
   border-radius: 0;
-  padding: 0;
-  padding-bottom: 5px;
-  cursor: text;
+  border: 0;
   color: rgba(24, 40, 72, 0.9);
+  cursor: text;
+  padding-bottom: 5px;
+  padding: 0;
 }
 
 .form input:focus,
 .form textarea:focus,
 .form button:focus {
-  outline: 0;
   border-bottom: 2px solid rgba(24, 40, 72, 0.9);
+  outline: 0;
 }
 
-.form input:focus + label,
-.form textarea:focus + label {
+.form input:focus+label,
+.form textarea:focus+label {
+  color: rgba(24, 40, 72, 0.9);
   cursor: text;
   font-size: 12px;
-  color: rgba(24, 40, 72, 0.9);
-  transform: translateY(-40px);
   margin-bottom: 10px;
+  transform: translateY(-40px);
 }
 
-.form textarea:focus + label {
+.form textarea:focus+label {
   transform: translateY(-60px);
 }
 
 .form input::placeholder,
 .form textarea::placeholder {
-  opacity: 0;
   color: rgba(24, 40, 72, 0.5);
+  opacity: 0;
 }
 
 .form input:focus::placeholder,
@@ -386,27 +410,32 @@ textarea {
   opacity: 1;
 }
 
-.form input:not(:placeholder-shown):not(:focus) + label,
-.form textarea:not(:placeholder-shown):not(:focus) + label{
+.form input:not(:placeholder-shown):not(:focus)+label,
+.form textarea:not(:placeholder-shown):not(:focus)+label {
   opacity: 0;
 }
 
 .form button {
-   background: rgba(24, 40, 72, 0.9);
-   font-family: 'Ubuntu', sans-serif;
-   font-weight: bold;
-   color: white;
-   border: none;
-   padding: 15px 50px;
-   cursor: pointer;
-   border-radius: 5px;
-   transition: all .3s ease-in-out;
-   width: 100%;
+  background: rgba(24, 40, 72, 0.9);
+  border-radius: 5px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+  padding: 15px 50px;
+  transition: all .3s ease-in-out;
+  width: 100%;
 }
 
 .form button:hover {
   background: rgba(75, 108, 183, 0.9);
-  border-radius:0;
+  border-radius: 0;
+}
+
+hr {
+  border-color: var(--cor-clara);
+  border-width: 1px;
 }
 
 /*MEDIA QUERIES - ONLY FOR THE PHOTO GALLERY*/
@@ -436,7 +465,7 @@ textarea {
   }
 }
 
-@media screen  and (max-width: 320px) {
+@media screen and (max-width: 320px) {
   .photos .photo-wrapper {
     width: 100%;
   }
